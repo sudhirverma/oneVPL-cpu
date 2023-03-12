@@ -71,7 +71,7 @@ jobs:
         mkdir _build
         cd _build
         cmake .. -DCMAKE_INSTALL_PREFIX=$VPL_INSTALL_DIR
-        cmake --build . --config Release --target install
+        sudo cmake --build . --config Release --target install
         cd BUILD_HOME_oneVPL
          
 
