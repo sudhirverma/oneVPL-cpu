@@ -58,19 +58,19 @@ jobs:
            build-essential git pkg-config yasm nasm cmake libva-dev libdrm-dev libva-drm2 python3 \
            python3-setuptools python3-pip meson ninja-build
            
-    - name: install oneVPL
-      run: |
-        export VPL_INSTALL_DIR=$HOME/_vplinstall
-        cd $HOME
-        pwd
-        mkdir _vplinstall
-        git clone https://github.com/oneapi-src/oneVPL.git
-        cd oneVPL
-        mkdir _build
-        cd _build
-        cmake .. -DCMAKE_INSTALL_PREFIX=$VPL_INSTALL_DIR
-        sudo cmake --build . --config Release --target install
-        cd /home/runner/work/oneVPL-cpu/oneVPL-cpu
+#     - name: install oneVPL
+#       run: |
+#         export VPL_INSTALL_DIR=$HOME/_vplinstall
+#         cd $HOME
+#         pwd
+#         mkdir _vplinstall
+#         git clone https://github.com/oneapi-src/oneVPL.git
+#         cd oneVPL
+#         mkdir _build
+#         cd _build
+#         cmake .. -DCMAKE_INSTALL_PREFIX=$VPL_INSTALL_DIR
+#         sudo cmake --build . --config Release --target install
+#         cd /home/runner/work/oneVPL-cpu/oneVPL-cpu
          
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
