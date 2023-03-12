@@ -60,8 +60,6 @@ jobs:
            
     - name: install oneVPL
       run: |
-        export BUILD_HOME_oneVPL="$(pwd)"
-        echo $BUILD_HOME_oneVPL
         export VPL_INSTALL_DIR=$HOME/_vplinstall
         cd $HOME
         pwd
@@ -72,7 +70,7 @@ jobs:
         cd _build
         cmake .. -DCMAKE_INSTALL_PREFIX=$VPL_INSTALL_DIR
         sudo cmake --build . --config Release --target install
-        cd BUILD_HOME_oneVPL
+        cd /home/runner/work/oneVPL-cpu/oneVPL-cpu
          
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
