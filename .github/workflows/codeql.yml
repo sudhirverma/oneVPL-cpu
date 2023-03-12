@@ -61,6 +61,7 @@ jobs:
     - name: install oneVPL
       run: |
         export BUILD_HOME_oneVPL="$(pwd)"
+        echo $BUILD_HOME_oneVPL
         export VPL_INSTALL_DIR=$HOME/_vplinstall
         cd $HOME
         pwd
