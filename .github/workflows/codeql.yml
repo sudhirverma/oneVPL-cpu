@@ -71,13 +71,12 @@ jobs:
 #         cmake .. -DCMAKE_INSTALL_PREFIX=$VPL_INSTALL_DIR
 #         sudo cmake --build . --config Release --target install
 #         cd /home/runner/work/oneVPL-cpu/oneVPL-cpu
-         
+       #source script/bootstrap
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Build
       run: |
-        source script/bootstrap
         script/build
 
     # ℹ️ Command-line programs to run using the OS shell.
